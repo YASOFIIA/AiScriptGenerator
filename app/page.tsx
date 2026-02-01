@@ -6,7 +6,7 @@ import { SettingsInput } from "@/components/settings-input"
 import { ProgressDisplay } from "@/components/progress-display"
 import { ResultsSection } from "@/components/results-section"
 import { Button } from "@/components/ui/button"
-import { Loader2 } from "lucide-react"
+import { Spinner } from "@/components/ui/spinner"
 
 type RunState = "PENDING" | "RUNNING" | "COMPLETED" | "FAILED" | "CANCELED"
 
@@ -183,12 +183,12 @@ export default function HomePage() {
               >
                 {isUploading ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Spinner className="mr-2" />
                     Uploading...
                   </>
                 ) : isRunning ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Spinner className="mr-2" />
                     Generating...
                   </>
                 ) : (
