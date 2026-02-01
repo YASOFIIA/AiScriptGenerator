@@ -10,7 +10,6 @@ class Settings(BaseSettings):
     # API keys
     GEMINI_API_KEY: str
     PERPLEXITY_API_KEY: str
-    GEMINI2_API_KEY: str = ""
     PERPLEXITY_PROVIDER: str = "perplexity"
 
     USE_TRACE: bool = True
@@ -34,6 +33,16 @@ class Settings(BaseSettings):
         env_file_encoding="utf-8",
         extra="ignore",
     )
+
+    GEMINI_BASE_URL: str = "https://generativelanguage.googleapis.com/v1beta/openai"
+    GEMINI_MODEL: str = "gemini-1.5-pro"
+    GEMINI_TEMPERATURE: float = 0.7
+
+    PERPLEXITY_BASE_URL: str = "https://api.perplexity.ai"
+    PERPLEXITY_MODEL: str = "sonar"
+    PERPLEXITY_TEMPERATURE: float = 0.2
+
+
 
     @property
     def uploads_path(self) -> Path:
