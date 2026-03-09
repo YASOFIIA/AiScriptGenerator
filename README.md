@@ -1,0 +1,1 @@
+An automation tool that generates production-ready scripts at scale. Upload a CSV file, and the system processes each row through a 10-stage LLM pipeline — using Google Gemini and Perplexity APIs to iteratively refine the output — then exports everything as formatted DOCX files.
